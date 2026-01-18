@@ -1,7 +1,5 @@
 <div align="center">
 
-<img width="180" src="https://github.com/devkartikrathi.png" alt="devkartikrathi avatar" />
-
 <h1>Kartik Rathi</h1>
 <p><b>Software Engineer | Full Stack | Systems-First Thinker</b></p>
 
@@ -28,7 +26,9 @@ Building production-grade systems.
 
 ## ⚡ Real-Time Developer Snapshot
 
+<div align="center">
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=devkartikrathi&theme=github" />
+</div>
 
 ---
 
