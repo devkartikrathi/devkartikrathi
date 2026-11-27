@@ -60,7 +60,7 @@ I'm a **Software Engineer at [Global Payments](https://globalpayments.com)**. Be
 
 <p align="center">
   <a href="https://github.com/devkartikrathi/code-assist"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/card-codeassist.svg"><img src="assets/light/card-codeassist.svg" width="49%" alt="Code Assist — a browser IDE on WebContainers with streaming AI edits"></picture></a>
-  <a href="https://github.com/devkartikrathi/ChatGita"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/card-chatgita.svg"><img src="assets/light/card-chatgita.svg" width="49%" alt="ChatGita — semantic search over the Bhagavad Gita"></picture></a>
+  <a href="https://github.com/devkartikrathi/ChatGita"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/card-chatgita.svg"><img src="assets/light/card-chatgita.svg" width="49%" alt="ChatGita — Gemma 3 and Llama models fine-tuned on the Bhagavad Gita, grounded with RAG"></picture></a>
 </p>
 
 <details>
@@ -73,7 +73,7 @@ I'm a **Software Engineer at [Global Payments](https://globalpayments.com)**. Be
 | **Reimagining Delhi** | Bilingual civic redesign on a hairline design system | [repo](https://github.com/devkartikrathi/DelhiGov) | — |
 | **Chronos** | 24-hour time tracker with a deterministic insight engine | [repo](https://github.com/devkartikrathi/time-tracker) | — |
 | **Code Assist** | Browser IDE on WebContainers, Claude-powered edits | [repo](https://github.com/devkartikrathi/code-assist) | [demo](https://code-assist.kartik-rathi.site) |
-| **ChatGita** | Semantic verse retrieval over the Bhagavad Gita | [repo](https://github.com/devkartikrathi/ChatGita) | — |
+| **ChatGita** | Gemma 3 and Llama fine-tuned on the Gita, grounded with RAG | [repo](https://github.com/devkartikrathi/ChatGita) | — |
 
 </details>
 

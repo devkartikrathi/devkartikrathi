@@ -67,10 +67,10 @@ PROJECTS = [
          desc="A full-stack IDE in the browser. Node.js runs client-side via WebContainers while "
               "Claude streams code generation and multi-file edits.",
          stack="React · WebContainers · Monaco · Vite"),
-    dict(slug="chatgita", name="ChatGita", kind="RAG · NLP", motif="sun",
-         desc="Semantic search over the Bhagavad Gita. Ask a question, get the verses that "
-              "answer it, with transliteration and context.",
-         stack="Python · Embeddings · Vector search"),
+    dict(slug="chatgita", name="ChatGita", kind="FINE-TUNING · RAG", motif="sun",
+         desc="Fine-tuned Gemma 3 and Llama models on the Bhagavad Gita, then grounded them "
+              "with RAG over the verses, so answers come with transliteration and context.",
+         stack="Gemma 3 · Llama · Fine-tuning · RAG"),
 ]
 
 TOOLKIT = [
