@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="46" viewBox="0 0 144 46" role="img" aria-label="Portfolio"><title>Portfolio</title><style>@font-face{font-family:hl-monom;font-style:normal;src:url(data:font/woff2;base64,d09GMgABAAAAAALkABAAAAAABZwAAAKKAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbIBwqBmA/U1RBVEwAZBEICoNIgmABNgIkAxQLFAAEIAV+ByAMBxsKBCCeg3Hj3NyIuDi27HorMbVm7CMevt+Pdu57/6+4JyyZaNyOeF1CplFJeGMocbdiDW8rB2vuMM2aqDP7n6rG0QZpS0C21iZeIqY5vPvQ/wCwhSfOpYsCHGCLDzWahhnnTT7BCYyaJ/Q3sRd9kALQh+oWJxHRcnMt9ejbDQTqAEkIlUKgRp8BsVuqNsO2Atb+AYEaE6Yky7TD+UA5C0dG0HKRzq/8U5IWVu0ADqXzcRXIsR0gUU3CcIODOwF8giGn8/LqmLwcWASkibSIIaUQqiS0SRiT7sTi5RX8fXnzK41CoUuCKOMf8Zl0HkAWUjSBAAkZbbJAm8JxoEmTjCF7KajpGZnXFBHdc9d+2EfvvfXG64IeMsQajaAatKAeD4EXgAJkIYQkSYIi55q6ipaG+urG6qrasr64eVDeTu2Dq85yUm2gXRNB1hS1iNri3I2F6XQlP5vN9p5PJpCejsfWzqiWDncX+t0f7JV7Ykt2a1LGwWzl2XS3ZlZyx+7FAIbaAZcvLl8uPSQsi/ePYWLh/NLHsH65KUxF4eb17knX30sOQWZxvsYLAaZ6d5BM9QvEQqpvWGKm+AQSAdX/j0Q+xiUiRjsM+g0qRm7h9OJPWZyGBEVCNBSjydrn7TYiFCKoUIC04fTiV0mEivgECmXytYe2LjAxbKdB5/HpyD+9AW933H4KuwMAgbSpeEUsffva/L9qLf+ApeHdNeA7/vEM1q+9JWz6ggoJBA/OTucNhLkRQS8i0nlwsgvK0DMzoyBQbUgGQUulndZEUS1pAHlBnQawRHvARnTit2xSY52TImIq0gKKbCISYuLKNCLCEioyFMoC0hJCjHIyArLWgLUI8gXrH+J/X78CAAA=) format('woff2')}
+.fu{animation:fu .9s cubic-bezier(.2,.7,.2,1) both}
+@keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.fi{animation:fi 1.1s ease both}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+.dr{stroke-dasharray:1;stroke-dashoffset:0;animation:dr 1.6s cubic-bezier(.65,0,.35,1) both}
+@keyframes dr{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.blink{animation:blink 1.05s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{opacity:.7;transform:scale(1)}80%,100%{opacity:0;transform:scale(3.2)}}
+text{font-kerning:normal}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style><rect x="0.5" y="0.5" width="143" height="45" rx="23" fill="none" stroke="#30363D" stroke-width="1" style="" /><circle cx="18" cy="23" r="2.5" fill="#FF6B3D" stroke="none" stroke-width="1" style="" /><text x="28.0" y="27.5" fill="#ECE8E1" text-anchor="start" style="font-family:hl-monom,ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:12.5px;letter-spacing:1.6px;">PORTFOLIO</text><path d="M116 27 L123 20 M118 20 L123 20 L123 25" fill="none" stroke="#FF6B3D" stroke-width="1.3" style="" stroke-linecap="square"/></svg>

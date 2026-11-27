@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="162" height="46" viewBox="0 0 162 46" role="img" aria-label="Book A Call"><title>Book A Call</title><style>@font-face{font-family:hl-monom;font-style:normal;src:url(data:font/woff2;base64,d09GMgABAAAAAAMoABAAAAAABbgAAALNAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbIBwqBmA/U1RBVEwATBEICoN8gx4BNgIkAxILEgAEIAV+ByAMBxsuBCAuBpyyiUd9KJtr4gyFo/g1RXOH66YygmKt7JndDQCwDCuyH0ugUp6EAgfkgS6WhCHY/1lzfyISaSZ3N1VLJCoj0kYSD0W7ZwuN1+kM3twRHeA7FaWJBDawTDPf+a3zlTer/8tgC//vLd1x4TAMb/EQ96I+FfEs0glm4U0neWFmAQZgg9wWPj4ycXJGQTcQaANIITQTAq300U8ssXujQFVCDRBoZZgREunGPlqa9kEKYttlJnFfVeRZtAPA6nY99gESCwCSllQMnly1CMADMMD64u//RvE3KAJyWDYwQCWEFhJdJIbI043mFIdDJ0pdXHsIpR4SosL9EY/IHQAKIYMLAiQKdFEIdFGagVZaSGmAxbwCNQywkMf21l88cN/dJ7wuRE170AJ0QFtcAzwDQAkKqRBCSMqCQKUJWrZcatuM3641iUUss6pqh9m6wNhL30bfkmFsOxndrrcBrSvGvGtqr1rF8+ustg3DGWdGKxOootIuHYw3UezPt7jBoNXUOptkU0ag9dZw64qBZ2QYO1L0XfT0DiILApKDbXxdbF/Y1fgbeyduaAz/o9mA0ff3xRocG30XfXF3vFAvnnfYtLXF2fQJtjbmwZOVJLLm9Cyj9AORte2IWi/PVndte9mJ2qJTKC0W9STdk/9MnPg99Thst1xSReRFk9UsL1QRq7WCyvPmrurxmP4+Y6nyY/r0p/OoSV6ooLClESaUjsSp2/evxaMLeo1w2lCB9ZZLygh2isYK5dJHCiabCSs+zFJQHJ5LVPNj2uJaojwGIJDTyvafO37Yfs63FpjwCx/KzRvwhd8hRtff0+ZHNJMg+JZN7gCUIQ5BnxCZhLR1WwVF9QSBQAtDFSBoq7IIQZQ0SO2wORxoox0m8V6Yw4f9S65WJtmkpmGmq2QsoaaloWnKp6aqZabHZaqkq6UibKCnpI8A1EEuaN+D9V5eAAAAAA==) format('woff2')}
+.fu{animation:fu .9s cubic-bezier(.2,.7,.2,1) both}
+@keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.fi{animation:fi 1.1s ease both}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+.dr{stroke-dasharray:1;stroke-dashoffset:0;animation:dr 1.6s cubic-bezier(.65,0,.35,1) both}
+@keyframes dr{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.blink{animation:blink 1.05s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.4s ease-out infinite}
+@keyframes pulse{0%{opacity:.7;transform:scale(1)}80%,100%{opacity:0;transform:scale(3.2)}}
+text{font-kerning:normal}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style><rect x="0.5" y="0.5" width="161" height="45" rx="23" fill="#FF6B3D" stroke="#FF6B3D" stroke-width="1" style="" /><text x="24.0" y="27.5" fill="#0d1117" text-anchor="start" style="font-family:hl-monom,ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:12.5px;letter-spacing:1.6px;">BOOK A CALL</text><path d="M132 27 L139 20 M134 20 L139 20 L139 25" fill="none" stroke="#0d1117" stroke-width="1.3" style="" stroke-linecap="square"/></svg>
