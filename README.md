@@ -28,9 +28,7 @@
 
 I build LLM systems that hold up in production: retrieval that cites its sources, agents that finish the job, and pipelines with latency and error budgets that someone actually watches.
 
-I'm a **Software Engineer at [Global Payments](https://globalpayments.com)**. Before that I shipped RAG and ML pipelines on GCP at Arcap, document intelligence at NeedCFO, and Sanskrit-to-English translation research at IIT Mandi. Ask me about RAG architecture, evaluation, FastAPI, agent orchestration, or system design.
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/metrics.svg"><img src="assets/light/metrics.svg" width="100%" alt="Impact: 300+ inference requests a day; P95 under 800 ms; under 1% error rate; 25% fewer low-quality answers week over week; 100+ financial documents a day through OCR and LLM; 50% less manual review time"></picture>
+I'm a **Software Engineer at [Global Payments](https://globalpayments.com)**. Before that I researched LLM-based Sanskrit-to-English translation at IIT Mandi's Center for AI & Robotics. Ask me about RAG architecture, evaluation, FastAPI, agent orchestration, or system design.
 
 > [!NOTE]
 > **Now:** automating team operations at Global Payments, turning tracking, reporting and comms into reusable workflows. On the side I'm shipping small, opinionated products like [VimLearn](https://github.com/devkartikrathi/vimlearn), [Chronos](https://github.com/devkartikrathi/time-tracker) and [Reimagining Delhi](https://github.com/devkartikrathi/DelhiGov).
@@ -39,34 +37,34 @@ I'm a **Software Engineer at [Global Payments](https://globalpayments.com)**. Be
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/section-02.svg"><img src="assets/light/section-02.svg" width="100%" alt="§02 Record — where I've worked"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/timeline.svg"><img src="assets/light/timeline.svg" width="100%" alt="Experience: Software Engineer at Global Payments (Feb 2026 to present); Software Engineer, AI Systems at Arcap REIT AI Solutions (Aug 2025 to Jan 2026); Software Developer Intern at NeedCFO (Dec 2024 to Jun 2025); Research Intern, LLM and NLP at IIT Mandi (Jun to Jul 2024); B.Tech CSE (AI and ML), K.R. Mangalam University, 2021 to 2025, GPA 8.6"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/timeline.svg"><img src="assets/light/timeline.svg" width="100%" alt="Experience: Software Engineer at Global Payments (Feb 2026 to present); Research Intern, LLM and NLP at IIT Mandi (Jun to Jul 2024)"></picture>
 
 <br/>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/section-03.svg"><img src="assets/light/section-03.svg" width="100%" alt="§03 Selected work — things I've shipped"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/section-03.svg"><img src="assets/light/section-03.svg" width="100%" alt="§03 Education — where I studied"></picture>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/education.svg"><img src="assets/light/education.svg" width="100%" alt="B.Tech in Computer Science, specialisation in AI and Machine Learning, K.R. Mangalam University, 2021 to 2025, CGPA 8.6 out of 10"></picture>
+
+<br/>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/section-04.svg"><img src="assets/light/section-04.svg" width="100%" alt="§04 Selected work — things I've shipped"></picture>
 
 <p align="center">
-  <a href="https://github.com/devkartikrathi/vimlearn"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/card-vimlearn.svg"><img src="assets/light/card-vimlearn.svg" width="49%" alt="VimLearn — an interactive Vim course in a from-scratch modal editor"></picture></a>
-  <a href="https://github.com/devkartikrathi/DelhiGov"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/card-delhi.svg"><img src="assets/light/card-delhi.svg" width="49%" alt="Reimagining Delhi — a conceptual redesign of Delhi's public record"></picture></a>
+  <a href="https://github.com/devkartikrathi/vimlearn"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/card-vimlearn.svg"><img src="assets/light/card-vimlearn.svg" width="100%" alt="VimLearn — an interactive Vim course in a from-scratch modal editor"></picture></a>
 </p>
 
 <p align="center">
+  <a href="https://github.com/devkartikrathi/DelhiGov"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/card-delhi.svg"><img src="assets/light/card-delhi.svg" width="49%" alt="Reimagining Delhi — a conceptual redesign of Delhi's public record"></picture></a>
   <a href="https://github.com/devkartikrathi/time-tracker"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/card-chronos.svg"><img src="assets/light/card-chronos.svg" width="49%" alt="Chronos — a time tracker that turns a month into a grid"></picture></a>
-  <a href="https://github.com/devkartikrathi/pathgenie"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/card-pathgenie.svg"><img src="assets/light/card-pathgenie.svg" width="49%" alt="PathGenie — a multi-agent AI career mentor"></picture></a>
 </p>
 
 <p align="center">
   <a href="https://github.com/devkartikrathi/code-assist"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/card-codeassist.svg"><img src="assets/light/card-codeassist.svg" width="49%" alt="Code Assist — a browser IDE on WebContainers with streaming AI edits"></picture></a>
-  <a href="https://github.com/devkartikrathi/finsight"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/card-finsight.svg"><img src="assets/light/card-finsight.svg" width="49%" alt="FinSight One — cited RAG over long financial reports"></picture></a>
-</p>
-
-<p align="center">
-  <a href="https://statly.kartik-rathi.site"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/card-statly.svg"><img src="assets/light/card-statly.svg" width="49%" alt="Statly — trade analytics for Indian retail traders"></picture></a>
   <a href="https://github.com/devkartikrathi/ChatGita"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/card-chatgita.svg"><img src="assets/light/card-chatgita.svg" width="49%" alt="ChatGita — semantic search over the Bhagavad Gita"></picture></a>
 </p>
 
 <details>
-<summary><b>Links, live demos & the archive</b></summary>
+<summary><b>Links & live demos</b></summary>
 <br/>
 
 | Project | What it is | Code | Live |
@@ -74,25 +72,12 @@ I'm a **Software Engineer at [Global Payments](https://globalpayments.com)**. Be
 | **VimLearn** | 52-lesson Vim course in a hand-built modal editor | [repo](https://github.com/devkartikrathi/vimlearn) | — |
 | **Reimagining Delhi** | Bilingual civic redesign on a hairline design system | [repo](https://github.com/devkartikrathi/DelhiGov) | — |
 | **Chronos** | 24-hour time tracker with a deterministic insight engine | [repo](https://github.com/devkartikrathi/time-tracker) | — |
-| **PathGenie** | Multi-agent career mentor with persistent memory | [repo](https://github.com/devkartikrathi/pathgenie) | [demo](https://pathgenie.kartik-rathi.site) |
 | **Code Assist** | Browser IDE on WebContainers, Claude-powered edits | [repo](https://github.com/devkartikrathi/code-assist) | [demo](https://code-assist.kartik-rathi.site) |
-| **FinSight One** | Hybrid-search RAG with page-level citations | [repo](https://github.com/devkartikrathi/finsight) | — |
-| **Statly** | Trade analytics SaaS for Indian retail traders | private | [demo](https://statly.kartik-rathi.site) |
 | **ChatGita** | Semantic verse retrieval over the Bhagavad Gita | [repo](https://github.com/devkartikrathi/ChatGita) | — |
-| Legacy | Collaborative family-tree builder on React Flow | [repo](https://github.com/devkartikrathi/family-tree) | — |
-| Presentation Summarization | Condense PPT decks while keeping the core ideas | [repo](https://github.com/devkartikrathi/presentation-summarization) | — |
 
 </details>
 
 <br/>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/section-04.svg"><img src="assets/light/section-04.svg" width="100%" alt="§04 How I build — a RAG loop, as I ship it"></picture>
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/pipeline.svg"><img src="assets/light/pipeline.svg" width="100%" alt="RAG pipeline: sources, ingest with OCR and parsing, index by chunking and embedding, hybrid BM25 plus vector retrieval, cross-encoder rerank, cited generation, and evaluation with RAGAS and P95 latency, with a feedback loop from evaluation back to indexing"></picture>
-
-<sub>Retrieval is hybrid by default, answers carry citations or don't ship, and every change is gated on an eval run (faithfulness, answer relevance, latency) rather than vibes.</sub>
-
-<br/><br/>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/section-05.svg"><img src="assets/light/section-05.svg" width="100%" alt="§05 Toolkit — what I reach for"></picture>
 

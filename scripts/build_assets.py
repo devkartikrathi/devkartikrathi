@@ -23,17 +23,8 @@ SPEC = [
     ("ROLE", "Software Engineer"),
     ("BASE", "Global Payments, Pune"),
     ("FOCUS", "RAG · Agents · LLM infra"),
-    ("PREV", "Arcap · NeedCFO · IIT Mandi"),
+    ("PREV", "Research, IIT Mandi"),
     ("STATUS", "Open to collaborations"),
-]
-
-METRICS = [
-    ("300+", "inference requests", "per day, in production"),
-    ("<800ms", "P95 latency on", "GCP Cloud Run"),
-    ("<1%", "error rate across", "LLM pipelines"),
-    ("−25%", "low-quality answers,", "week over week"),
-    ("100+", "financial docs a day", "through OCR + LLM"),
-    ("−50%", "manual review time", "after automation"),
 ]
 
 TIMELINE = [
@@ -43,28 +34,21 @@ TIMELINE = [
               "automation that turns team tracking, reporting and comms into reusable, "
               "configurable workflows other teams can adopt.",
          tags="Java · Python · Workflow automation"),
-    dict(date=("AUG 2025", "JAN 2026"), role="Software Engineer, AI Systems",
-         org="Arcap REIT AI Solutions  ·  Remote",
-         desc="Designed ML/LLM pipelines on GCP (Cloud Run, GCS, Pub/Sub) serving 300+ inference "
-              "requests a day at P95 under 800 ms and under 1% errors. Built LangChain + Qdrant "
-              "RAG with RAGAS evaluation, cutting low-quality responses 25% week over week.",
-         tags="FastAPI · LangChain · Qdrant · GCP · Pub/Sub · RAGAS"),
-    dict(date=("DEC 2024", "JUN 2025"), role="Software Developer Intern",
-         org="NeedCFO  ·  Gurugram, India",
-         desc="Built an OCR + LLM pipeline processing 100+ financial documents a day, cutting "
-              "manual review time by half, on FastAPI, MongoDB and Celery/Redis workers.",
-         tags="FastAPI · MongoDB · Celery · Redis · OCR"),
     dict(date=("JUN 2024", "JUL 2024"), role="Research Intern, LLM & NLP",
          org="IIT Mandi  ·  Center for AI & Robotics",
          desc="Fine-tuned transformer models for Sanskrit-to-English translation and explored "
               "RAG architectures for knowledge-augmented question answering.",
          tags="PyTorch · Hugging Face · NLP · RAG"),
-    dict(date=("2021", "2025"), role="B.Tech, CSE (AI & ML)",
-         org="K.R. Mangalam University  ·  GPA 8.6 / 10", edu=True,
-         desc="Data structures, algorithms, operating systems, DBMS, networks, distributed "
-              "systems, ML, DL, NLP and system design.",
-         tags="Education"),
 ]
+
+EDUCATION = dict(
+    date=("2021", "2025"), degree="B.Tech, Computer Science",
+    major="Specialisation in Artificial Intelligence & Machine Learning",
+    school="K.R. Mangalam University  ·  Gurugram, India",
+    gpa="8.6", gpa_of="/ 10",
+    courses=["Data Structures", "Algorithms", "Operating Systems", "DBMS", "Networks",
+             "Distributed Systems", "Machine Learning", "Deep Learning", "NLP", "System Design"],
+)
 
 PROJECTS = [
     dict(slug="vimlearn", name="VimLearn", kind="EDTECH", motif="vim",
@@ -79,22 +63,10 @@ PROJECTS = [
          desc="A time tracker for the 24 hours you actually have. Log a day in twenty seconds "
               "and watch a month of real life appear as a grid, read by an insight engine.",
          stack="Next.js 16 · Prisma 7 · Neon · Clerk"),
-    dict(slug="pathgenie", name="PathGenie", kind="MULTI-AGENT", motif="graph",
-         desc="An AI career mentor built as a crew of agents: profile analysis, goal setting, "
-              "resource curation and interview prep, with persistent memory.",
-         stack="Next.js · CrewAI · LangChain · RAG"),
     dict(slug="codeassist", name="Code Assist", kind="DEV TOOLS", motif="stream",
          desc="A full-stack IDE in the browser. Node.js runs client-side via WebContainers while "
               "Claude streams code generation and multi-file edits.",
          stack="React · WebContainers · Monaco · Vite"),
-    dict(slug="finsight", name="FinSight One", kind="RAG · FINANCE", motif="doc",
-         desc="Privacy-first RAG over 100+ page financial reports. Hybrid semantic and keyword "
-              "search, with every answer cited back to its source page.",
-         stack="FastAPI · LangChain · Qdrant · Docker"),
-    dict(slug="statly", name="Statly", kind="FINTECH SAAS", motif="candles",
-         desc="Trade analytics for Indian retail traders: performance metrics, pattern "
-              "recognition and AI insights to end blind trading.",
-         stack="Next.js · FastAPI · PostgreSQL · Gemini"),
     dict(slug="chatgita", name="ChatGita", kind="RAG · NLP", motif="sun",
          desc="Semantic search over the Bhagavad Gita. Ask a question, get the verses that "
               "answer it, with transliteration and context.",
@@ -110,21 +82,11 @@ TOOLKIT = [
     ("FRONTEND", ["Next.js", "React", "Tailwind", "shadcn/ui", "Clerk"]),
 ]
 
-PIPELINE = [
-    ("01", "Sources", "PDF · API · DB"),
-    ("02", "Ingest", "OCR · parse"),
-    ("03", "Index", "chunk · embed"),
-    ("04", "Retrieve", "BM25 + vector"),
-    ("05", "Rerank", "cross-encoder"),
-    ("06", "Generate", "cited answer"),
-    ("07", "Evaluate", "RAGAS · P95"),
-]
-
 SECTIONS = [
     ("01", "Index", "who I am"),
     ("02", "Record", "where I've worked"),
-    ("03", "Selected work", "things I've shipped"),
-    ("04", "How I build", "a RAG loop, as I ship it"),
+    ("03", "Education", "where I studied"),
+    ("04", "Selected work", "things I've shipped"),
     ("05", "Toolkit", "what I reach for"),
     ("06", "Activity", "auto-updated daily"),
     ("07", "Contact", "say hello"),
@@ -235,28 +197,6 @@ def section(theme, num, title, sub):
     s.line(x1 + 10, 50.5, x2, 50.5, cls="dr", style=delay(.25))
     s.line(x2 + .5, 43, x2 + .5, 58, stroke="dim", cls="fi", style=delay(1.2))
     s.text(W - 1, 55, sub, "mono", 14, "dim", "end", ls=1.8, upper=True, cls="fi", style=delay(.8))
-    return s
-
-
-# ── METRICS STRIP ──────────────────────────────────────────────────────────
-def metrics(theme):
-    s = SVG(W, 200, theme, "Impact: " + ", ".join(f"{m[0]} {m[1]} {m[2]}" for m in METRICS))
-    cw = W / len(METRICS)
-    s.line(0, 12.5, W, 12.5, cls="dr")
-    s.line(0, 187.5, W, 187.5, cls="dr", style=delay(.15))
-    for i, (num, l1, l2) in enumerate(METRICS):
-        x = i * cw
-        if i:
-            s.line(round(x) + .5, 13, round(x) + .5, 187, cls="dr", style=delay(.3 + i * .06))
-        d = .35 + i * .11
-        s.text(x + 22, 44, f"0{i+1}", "mono", 12.5, "dim", ls=1.2, cls="fi", style=delay(d))
-        size = 58
-        while measure(num, "serif", size) > cw - 40:
-            size -= 2
-        s.text(x + 20, 106, num, "serif", size, "ink", cls="fu", style=delay(d), ls=-.5)
-        s.line(x + 22, 122.5, x + 48, 122.5, stroke="accent", w=2, cls="dr", style=delay(d + .3))
-        s.text(x + 22, 150, l1, "mono", 13, "dim", cls="fi", style=delay(d + .2))
-        s.text(x + 22, 169, l2, "mono", 13, "dim", cls="fi", style=delay(d + .2))
     return s
 
 
@@ -394,68 +334,91 @@ def motif(s: SVG, kind: str, ox: int, oy: int):
         s.text(cx, oy + 108, "18 · 700", "mono", 10, D, "middle", ls=1)
 
 
-def card(theme, i, p):
-    CW, CH = 580, 372
+def card(theme, i, p, wide=False):
+    """Project card. `wide` = full-width feature card for the lead project."""
+    CW, CH = (1200, 330) if wide else (580, 372)
+    R = CW - 28  # right edge of content
     s = SVG(CW, CH, theme, f"{p['name']} — {p['desc']}")
     s.rect(.5, .5, CW - 1, CH - 1, cls="dr", style="animation-duration:2s;")
     for (x, y, dx, dy) in [(0, 0, 1, 1), (CW, 0, -1, 1), (0, CH, 1, -1), (CW, CH, -1, -1)]:
         s.path(f"M{x + dx*.75} {y + dy*14} V{y + dy*.75} H{x + dx*14}", stroke="accent", sw=1.5,
                cls="fi", style=delay(.6))
-    s.text(28, 46, f"P/0{i+1}", "mono-m", 15, "accent", ls=1.6, cls="fi")
+    label = f"P/0{i+1}" + ("  ·  FEATURED" if wide else "")
+    s.text(28, 46, label, "mono-m", 15, "accent", ls=1.6, cls="fi")
     kw = measure(p["kind"], "mono", 13, 1.4)
-    s.rect(round(552 - kw - 26) + .5, 27.5, round(kw + 26), 28, stroke="dim", rx=14, cls="fi")
-    s.text(552 - 13, 46, p["kind"], "mono", 13, "dim", "end", ls=1.4, cls="fi")
+    s.rect(round(R - kw - 26) + .5, 27.5, round(kw + 26), 28, stroke="dim", rx=14, cls="fi")
+    s.text(R - 13, 46, p["kind"], "mono", 13, "dim", "end", ls=1.4, cls="fi")
 
-    s.text(28, 122, p["name"], "serif", 54, "ink", cls="fu", style=delay(.15), ls=-.4)
-    lines = wrap(p["desc"], "sans", 18.5, 372)[:5]
-    s.add(f'<g class="fu" style="{delay(.3)}">')
-    for j, ln in enumerate(lines):
-        s.text(28, 166 + j * 27, ln, "sans", 18.5, "dim")
-    s.add("</g>")
-    motif(s, p["motif"], 424, 150)
+    if wide:
+        s.text(28, 132, p["name"], "serif", 72, "ink", cls="fu", style=delay(.15), ls=-.6)
+        lines = wrap(p["desc"], "sans", 20, 640)[:3]
+        s.add(f'<g class="fu" style="{delay(.3)}">')
+        for j, ln in enumerate(lines):
+            s.text(28, 180 + j * 29, ln, "sans", 20, "dim")
+        s.add("</g>")
+        s.add('<g transform="translate(860 70) scale(1.75)">')
+        motif(s, p["motif"], 0, 0)
+        s.add("</g>")
+        ry = 266
+    else:
+        s.text(28, 122, p["name"], "serif", 54, "ink", cls="fu", style=delay(.15), ls=-.4)
+        lines = wrap(p["desc"], "sans", 18.5, 372)[:5]
+        s.add(f'<g class="fu" style="{delay(.3)}">')
+        for j, ln in enumerate(lines):
+            s.text(28, 166 + j * 27, ln, "sans", 18.5, "dim")
+        s.add("</g>")
+        motif(s, p["motif"], 424, 150)
+        ry = 308
 
-    s.line(28, 308.5, 552, 308.5, cls="dr", style=delay(.4))
-    s.text(28, 342, p["stack"], "mono", 14, "ink", ls=.2, cls="fi", style=delay(.6) + "fill-opacity:.8")
-    s.text(552 - 16, 342, "VIEW", "mono-m", 14, "accent", "end", ls=1.6, cls="fi", style=delay(.6))
-    s.arrow_ne(552 - 9, 341, 9)
+    s.line(28, ry + .5, R, ry + .5, cls="dr", style=delay(.4))
+    s.text(28, ry + 34, p["stack"], "mono", 14, "ink", ls=.2, cls="fi", style=delay(.6) + "fill-opacity:.8")
+    s.text(R - 16, ry + 34, "VIEW", "mono-m", 14, "accent", "end", ls=1.6, cls="fi", style=delay(.6))
+    s.arrow_ne(R - 9, ry + 33, 9)
     return s
 
 
-# ── PIPELINE ───────────────────────────────────────────────────────────────
-def pipeline(theme):
-    s = SVG(W, 318, theme, "RAG pipeline: " + " → ".join(p[1] for p in PIPELINE))
-    n, bw, bh = len(PIPELINE), 140, 100
-    gap = (W - 2 - n * bw) / (n - 1)
-    by, cy = 76, 76 + 50
-    xs = [1 + i * (bw + gap) for i in range(n)]
-    s.text(0, 32, "INPUT", "mono", 13, "dim", ls=1.8, cls="fi")
-    s.text(W, 32, "SHIPPED ANSWER", "mono", 13, "dim", "end", ls=1.8, cls="fi")
-    s.line(0, 48.5, W, 48.5, stroke="faint", cls="dr")
-    # flow line + packets (drawn beneath the boxes so they slip "through" them)
-    s.line(xs[0] + bw / 2, cy + .5, xs[-1] + bw / 2, cy + .5, stroke="dim", cls="dr", style=delay(.2))
-    main = f"M{xs[0]+bw/2} {cy+.5} H{xs[-1]+bw/2}"
-    for k in range(3):
-        s.add(f'<circle r="3.5" fill="{s.c("accent")}"><animateMotion dur="6s" begin="{k*2}s" '
-              f'repeatCount="indefinite" path="{main}"/></circle>')
-    # feedback arc Evaluate → Index
-    fx1, fx2 = xs[6] + bw / 2, xs[2] + bw / 2
-    fb = f"M{fx1} {by+bh} C{fx1} {by+bh+86} {fx2} {by+bh+86} {fx2} {by+bh}"
-    s.path(fb, stroke="accent", cls="dr", style=delay(1.4), attrs='stroke-dasharray="3 4"')
-    s.path(fb, stroke="accent", style="opacity:.0")
-    s.add(f'<circle r="3" fill="{s.c("accent")}"><animateMotion dur="4s" repeatCount="indefinite" '
-          f'path="{fb}"/></circle>')
-    s.path(f"M{fx2-5} {by+bh+8} L{fx2} {by+bh+1} L{fx2+5} {by+bh+8}", stroke="accent", sw=1.2)
-    s.text((fx1 + fx2) / 2, by + bh + 82, "FEEDBACK — evals drive chunking, retrieval & prompt changes",
-           "mono", 13, "dim", "middle", ls=.4, cls="fi", style=delay(1.8))
-    for i, (num, title, sub) in enumerate(PIPELINE):
-        x = xs[i]
-        st = delay(.2 + i * .12)
-        s.add(f'<g class="fu" style="{st}">')
-        s.rect(round(x) + .5, by + .5, bw - 1, bh - 1, stroke="ink" if i in (3, 6) else "rule", fill="bg")
-        s.text(x + 15, by + 26, num, "mono-m", 13, "accent", ls=1)
-        s.text(x + 15, by + 60, title, "serif", 30, "ink")
-        s.text(x + 15, by + 82, sub, "mono", 12.5, "dim")
-        s.add("</g>")
+# ── EDUCATION ──────────────────────────────────────────────────────────────
+def education(theme):
+    e = EDUCATION
+    H = 316
+    s = SVG(W, H, theme, f"{e['degree']}, {e['major']}. {e['school']}. GPA {e['gpa']} {e['gpa_of']}")
+    s.rect(.5, .5, W - 1, H - 1, cls="dr", style="animation-duration:2s;")
+    s.crop_marks(0, 0, W, H, len_=10, gap=0, stroke="accent")
+    # left: years
+    s.text(36, 52, e["date"][0], "mono-m", 14, "ink", ls=1.6, cls="fi")
+    s.text(36, 74, "— " + e["date"][1], "mono", 14, "dim", ls=1.6, cls="fi")
+    s.line(214.5, 28, 214.5, 220, cls="dr", style=delay(.2))
+    # middle: degree
+    s.add(f'<g class="fu" style="{delay(.2)}">')
+    s.text(252, 70, e["degree"], "serif", 48, "ink", ls=-.4)
+    s.text(252, 106, e["major"], "serif-i", 26, "accent")
+    s.text(252, 140, e["school"], "mono-m", 15, "dim", ls=.6)
+    s.add("</g>")
+    # right: GPA
+    gx = W - 40
+    s.line(gx - 230 + .5, 28, gx - 230 + .5, 220, cls="dr", style=delay(.3))
+    s.text(gx - 200, 52, "CGPA", "mono", 13, "dim", ls=1.6, cls="fi", style=delay(.4))
+    s.text(gx - 200, 150, e["gpa"], "serif", 108, "ink", ls=-2, cls="fu", style=delay(.45))
+    gw = measure(e["gpa"], "serif", 108, -2)
+    s.text(gx - 200 + gw + 10, 150, e["gpa_of"], "serif", 34, "dim", cls="fu", style=delay(.6))
+    bar = 170
+    s.rect(gx - 200, 176, bar, 4, stroke="none", fill="faint")
+    s.css += """.gp{transform-box:fill-box;transform-origin:left;animation:gp 1.6s cubic-bezier(.2,.7,.2,1) .7s both}
+    @keyframes gp{from{transform:scaleX(0)}to{transform:scaleX(1)}}"""
+    s.rect(gx - 200, 176, round(bar * float(e["gpa"]) / 10), 4, stroke="none", fill="accent", cls="gp")
+    # coursework row
+    s.line(0, 220.5, W, 220.5, cls="dr", style=delay(.5))
+    s.text(36, 258, "COURSEWORK", "mono-m", 13, "accent", ls=1.6, cls="fi", style=delay(.7))
+    x, y = 252, 258
+    for j, c in enumerate(e["courses"]):
+        cw = measure(c, "mono", 13)
+        if x > 252 and x + 26 + cw > W - 36:
+            x, y = 252, y + 26
+        elif x > 252:
+            s.text(x + 8, y, "/", "mono", 13, "faint", cls="fi", style=delay(.7))
+            x += 26
+        s.text(x, y, c, "mono", 13, "ink", cls="fi", style=delay(.75 + j * .04) + "fill-opacity:.85")
+        x += cw
     return s
 
 
@@ -532,11 +495,10 @@ def main():
         header(theme).save(ROOT, "header.svg")
         for num, title, sub in SECTIONS:
             section(theme, num, title, sub).save(ROOT, f"section-{num}.svg")
-        metrics(theme).save(ROOT, "metrics.svg")
+        education(theme).save(ROOT, "education.svg")
         timeline(theme).save(ROOT, "timeline.svg")
         for i, p in enumerate(PROJECTS):
-            card(theme, i, p).save(ROOT, f"card-{p['slug']}.svg")
-        pipeline(theme).save(ROOT, "pipeline.svg")
+            card(theme, i, p, wide=(i == 0)).save(ROOT, f"card-{p['slug']}.svg")
         toolkit(theme).save(ROOT, "toolkit.svg")
         statement(theme).save(ROOT, "statement.svg")
         for key, label, primary in BUTTONS:
