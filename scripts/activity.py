@@ -85,7 +85,7 @@ def render(theme: str, data: dict) -> SVG:
 
     W, H = 1200, 346
     s = SVG(W, H, theme, f"{data['total']} contributions in the last year; current streak {cur} days; "
-                         f"longest streak {longest} days")
+                         f"longest streak {longest} days", pad=32)
     s.line(0, 12.5, W, 12.5, cls="dr")
 
     # left column — numbers

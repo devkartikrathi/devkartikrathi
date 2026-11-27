@@ -22,25 +22,29 @@ FONT_DIR = os.path.join(HERE, "fonts")
 
 # ── Design tokens ──────────────────────────────────────────────────────────
 THEMES = {
+    # Dark — charcoal 60 · slate 30 · mint 10, with a touch of amber
     "dark": {
-        "bg": "#0d1117",      # GitHub dark canvas, used only to mask lines
-        "ink": "#ECE8E1",     # warm paper white
-        "dim": "#8B949E",
-        "faint": "#3D444D",
-        "rule": "#30363D",
-        "accent": "#FF6B3D",  # signal vermilion
-        "live": "#3FB950",
-        "accent_ink": "#0d1117",
+        "bg": "#202326",      # charcoal (panel fill)
+        "ink": "#E9ECE8",
+        "dim": "#94A3B8",     # slate
+        "faint": "#4B5563",   # slate, deep
+        "rule": "#3A414B",    # slate hairline
+        "accent": "#6EE7B7",  # mint
+        "warm": "#F2B544",    # amber
+        "live": "#F2B544",
+        "accent_ink": "#202326",
     },
+    # Light — linen 60 · navy 30 · amber 10
     "light": {
-        "bg": "#ffffff",
-        "ink": "#1B1A17",
-        "dim": "#59636E",
-        "faint": "#C9D1D9",
-        "rule": "#D1D9E0",
-        "accent": "#E4461B",
-        "live": "#1A7F37",
-        "accent_ink": "#ffffff",
+        "bg": "#F7F1E6",      # linen (panel fill)
+        "ink": "#14213D",     # navy
+        "dim": "#4A5872",     # navy, softened
+        "faint": "#D9CFBE",
+        "rule": "#DDD3C2",
+        "accent": "#B8650A",  # amber, deep enough to read on linen
+        "warm": "#B8650A",
+        "live": "#B8650A",
+        "accent_ink": "#F7F1E6",
     },
 }
 
@@ -124,7 +128,9 @@ text{font-kerning:normal}
 
 
 class SVG:
-    def __init__(self, w: int, h: int, theme: str, title: str, css: str = ""):
+    def __init__(self, w: int, h: int, theme: str, title: str, css: str = "",
+                 panel: bool = True, pad: int = 0):
+        self.panel, self.pad = panel, pad
         self.w, self.h = w, h
         self.t = THEMES[theme]
         self.theme = theme
@@ -207,11 +213,17 @@ class SVG:
             )
         style = "\n".join(faces) + BASE_CSS + self.css
         defs = f"<defs>{''.join(self.defs)}</defs>" if self.defs else ""
+        P = self.pad
+        W, H = self.w + 2 * P, self.h + 2 * P
+        bg = f'<rect width="{W}" height="{H}" fill="{self.t["bg"]}"/>' if self.panel else ""
+        body = "".join(self.parts)
+        if P:
+            body = f'<g transform="translate({P} {P})">{body}</g>'
         return (
-            f'<svg xmlns="http://www.w3.org/2000/svg" width="{self.w}" height="{self.h}" '
-            f'viewBox="0 0 {self.w} {self.h}" role="img" aria-label="{html.escape(self.title)}">'
+            f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
+            f'viewBox="0 0 {W} {H}" role="img" aria-label="{html.escape(self.title)}">'
             f"<title>{html.escape(self.title)}</title><style>{style}</style>{defs}"
-            + "".join(self.parts) + "</svg>"
+            + bg + body + "</svg>"
         )
 
     def save(self, root: str, name: str):

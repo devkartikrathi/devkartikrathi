@@ -187,7 +187,7 @@ def header(theme):
 
 # ── SECTION HEADS ──────────────────────────────────────────────────────────
 def section(theme, num, title, sub):
-    s = SVG(W, 92, theme, f"§{num} {title}")
+    s = SVG(W, 92, theme, f"§{num} {title}", panel=False)
     s.text(2, 60, f"§ {num}", "mono-m", 15, "accent", ls=1.5, cls="fi")
     s.text(74, 64, title, "serif", 54, "ink", cls="fu", ls=-.5)
     tw = measure(title, "serif", 54, -.5)
@@ -210,18 +210,18 @@ def timeline(theme):
         blocks.append((y, lines, h))
         y += h + 22
     H = y + 4
-    s = SVG(W, H, theme, "Experience timeline")
+    s = SVG(W, H, theme, "Experience timeline", pad=32)
     s.line(RAIL + .5, 24, RAIL + .5, H - 20, cls="dr", style="animation-duration:2.4s;")
     for idx, (e, (y, lines, h)) in enumerate(zip(TIMELINE, blocks)):
         d = .25 + idx * .22
         st = delay(d)
         s.text(DX, y + 30, e["date"][0], "mono-m", 14, "ink", ls=1.6, cls="fi", style=st)
         s.text(DX, y + 52, "— " + e["date"][1], "mono", 14,
-               "accent" if e.get("current") else "dim", ls=1.6, cls="fi", style=st)
+               "warm" if e.get("current") else "dim", ls=1.6, cls="fi", style=st)
         ny = y + 24
         if e.get("current"):
-            s.circle(RAIL + .5, ny, 6, fill="accent", cls="pulse")
-            s.circle(RAIL + .5, ny, 6, fill="accent", cls="fi", style=st)
+            s.circle(RAIL + .5, ny, 6, fill="warm", cls="pulse")
+            s.circle(RAIL + .5, ny, 6, fill="warm", cls="fi", style=st)
         else:
             s.circle(RAIL + .5, ny, 5, fill="bg", stroke="dim" if not e.get("edu") else "faint",
                      sw=1.2, cls="fi", style=st)
@@ -405,7 +405,7 @@ def education(theme):
     s.rect(gx - 200, 176, bar, 4, stroke="none", fill="faint")
     s.css += """.gp{transform-box:fill-box;transform-origin:left;animation:gp 1.6s cubic-bezier(.2,.7,.2,1) .7s both}
     @keyframes gp{from{transform:scaleX(0)}to{transform:scaleX(1)}}"""
-    s.rect(gx - 200, 176, round(bar * float(e["gpa"]) / 10), 4, stroke="none", fill="accent", cls="gp")
+    s.rect(gx - 200, 176, round(bar * float(e["gpa"]) / 10), 4, stroke="none", fill="warm", cls="gp")
     # coursework row
     s.line(0, 220.5, W, 220.5, cls="dr", style=delay(.5))
     s.text(36, 258, "COURSEWORK", "mono-m", 13, "accent", ls=1.6, cls="fi", style=delay(.7))
@@ -426,7 +426,7 @@ def education(theme):
 def toolkit(theme):
     rh = 64
     H = len(TOOLKIT) * rh + 16
-    s = SVG(W, H, theme, "Toolkit: " + "; ".join(f"{k}: {', '.join(v)}" for k, v in TOOLKIT))
+    s = SVG(W, H, theme, "Toolkit: " + "; ".join(f"{k}: {', '.join(v)}" for k, v in TOOLKIT), pad=32)
     s.line(0, 8.5, W, 8.5, cls="dr")
     for i, (label, items) in enumerate(TOOLKIT):
         y = 8 + i * rh
@@ -450,7 +450,7 @@ def toolkit(theme):
 # ── CONTACT ────────────────────────────────────────────────────────────────
 def statement(theme):
     s = SVG(W, 270, theme, "If you care about correctness, maintainability and real engineering "
-                          "trade-offs over buzzwords, let's talk.")
+                          "trade-offs over buzzwords, let's talk.", pad=32)
     s.crop_marks(0, 20, W, 230, len_=12, gap=0)
     s.text(0, 104, "Correctness, maintainability,", "serif", 66, "ink", cls="fu", ls=-.6)
     w1 = measure("and ", "serif", 66, -.6)
@@ -467,13 +467,13 @@ def statement(theme):
 def button(theme, key, label, primary):
     tw = measure(label, "mono-m", 12.5, 1.6)
     w = round(tw + 64)
-    s = SVG(w, 46, theme, label.title())
+    s = SVG(w, 46, theme, label.title(), panel=False)
     if primary:
         s.rect(.5, .5, w - 1, 45, stroke="accent", fill="accent", rx=23)
         s.text(24, 27.5, label, "mono-m", 12.5, "accent_ink", ls=1.6)
         s.arrow_ne(w - 30, 27, 7, stroke="accent_ink")
     else:
-        s.rect(.5, .5, w - 1, 45, stroke="rule", rx=23)
+        s.rect(.5, .5, w - 1, 45, stroke="rule", fill="bg", rx=23)
         s.circle(18, 23, 2.5, fill="accent")
         s.text(28, 27.5, label, "mono-m", 12.5, "ink", ls=1.6)
         s.arrow_ne(w - 28, 27, 7)
@@ -481,7 +481,7 @@ def button(theme, key, label, primary):
 
 
 def footer(theme):
-    s = SVG(W, 76, theme, "End of record")
+    s = SVG(W, 76, theme, "End of record", panel=False)
     s.line(0, 20.5, W, 20.5, cls="dr")
     s.line(W - 240, 20.5, W, 20.5, stroke="accent", w=2, cls="dr", style=delay(.5))
     s.text(0, 56, "END OF RECORD  ·  KARTIK RATHI  ·  NEW DELHI", "mono", 13, "dim", ls=1.8, cls="fi")

@@ -10,7 +10,7 @@
 
 <a href="https://kartik-rathi.site"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/header.svg"><img src="assets/light/header.svg" width="100%" alt="Kartik Rathi — Software Engineer, AI/ML Systems. Building production RAG and multi-agent systems."></picture></a>
 
-<br/>
+<br/><br/>
 
 <p>
   <a href="https://linkedin.com/in/devkartikrathi"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/btn-linkedin.svg"><img src="assets/light/btn-linkedin.svg" height="40" alt="LinkedIn"></picture></a>
